@@ -154,9 +154,9 @@ void    ATC_DeInit(ATC_HandleTypeDef* hAtc);
 bool    ATC_SetEvents(ATC_HandleTypeDef* hAtc, const ATC_EventTypeDef* psEvents);
 bool    ATC_SetCommands(ATC_HandleTypeDef* hAtc, const ATC_CmdTypeDef* psCmds);
 void    ATC_Loop(ATC_HandleTypeDef* hAtc);
-int     ATC_SendReceive(ATC_HandleTypeDef* hAtc, const char* pCommand, uint32_t TxTimeout, char** ppResp, uint32_t RxTimeout, uint8_t Items, ...);
+int     ATC_SendReceive(ATC_HandleTypeDef* hAtc, const char* pCommand, uint32_t TxTimeout, char** ppResp, uint32_t RxTimeout, int Items, ...);
 bool    ATC_Send(ATC_HandleTypeDef* hAtc, const char* pCommand, uint32_t TxTimeout, ...);
-int     ATC_Receive(ATC_HandleTypeDef* hAtc, char** ppResp, uint32_t RxTimeout, uint8_t Items, ...);
+int     ATC_Receive(ATC_HandleTypeDef* hAtc, char** ppResp, uint32_t RxTimeout, int Items, ...);
 
 void    ATC_IdleLineCallback(ATC_HandleTypeDef* hAtc, uint16_t Len);
 void    ATC_Delay(uint32_t Delay);
